@@ -1,45 +1,28 @@
 package Practice;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Temp {
 
     public static void main(String[] args) {
-        int[] a = {1,3,2,4};
+        Set<Integer> set1 = new HashSet();
+        Set<Integer> set2 = new HashSet();
+        Set<Integer> union = new HashSet();
 
-        int n = a.length;
-        Stack<Integer> s = new Stack();
-        List<Integer> ls = new ArrayList();
-       /*
-        1 3 2 4 
-          i  
-        stack = 4 
-        ans   = -1
-        */
-        for(int i=n-1;i>=0;i--)
-        {
-            if(s.isEmpty())
-                ls.add(-1);
-            else if(a[i]<s.peek())
-                ls.add(s.peek());
-            else if(a[i]>s.peek())
-            {
-                while(a[i]>=s.peek())
-                    s.pop();
-                if(s.isEmpty())
-                    ls.add(-1);
-                else
-                    ls.add(s.peek());
-            }
-                
-         s.push(a[i]);
-        }
-        
-        
-        
-        System.out.println(ls);
+    
+
+        Set<Integer> difference = new HashSet();
+
+        set1.add(1);
+        set1.add(2);
+        set1.add(3);
+
+        set2.add(1);
+        set2.add(4);
+        set2.add(5);
+
+       
 
     }
 
